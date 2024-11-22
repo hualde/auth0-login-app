@@ -1,4 +1,4 @@
-import { InitAuth0 } from '@auth0/nextjs-auth0';
+import { getSession, getAccessToken, withApiAuthRequired, withPageAuthRequired } from '@auth0/nextjs-auth0';
 
 export const auth0Config = {
   authorizationParams: {
@@ -6,5 +6,5 @@ export const auth0Config = {
   },
 };
 
-export const initAuth0 = InitAuth0(auth0Config);
+export { getSession, getAccessToken, withApiAuthRequired, withPageAuthRequired };
 
